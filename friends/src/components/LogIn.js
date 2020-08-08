@@ -22,10 +22,10 @@ class LogIn extends React.Component {
 
     login = e => {
         e.preventDefault();
-        axios.post('http//localhost5000/api/login', this.state.credentials)
+        axios.post('http://localhost:5000/api/login', this.state.credentials)
             .then((res) => {
                 console.log('login success: res', res);
-                localStorage.setItem('token',res.data.payload);
+                localStorage.setItem('token', res.data.payload);
             })
             .catch((err) => {
                 console.log('login failed', err.message);
