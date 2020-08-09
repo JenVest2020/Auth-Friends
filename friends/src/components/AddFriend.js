@@ -4,6 +4,7 @@ import FriendsCard from './FriendsCard';
 
 
 const AddFriend = (props) => {
+    console.log('from AddFriend: props', props);
     const [newFriend, setNewFriend] = useState({
         name: '',
         age: '',
@@ -25,9 +26,9 @@ const AddFriend = (props) => {
                 console.log('from addFriend: res', res);
                 setNewFriend({
                     ...props.friends,
-                    name: res.data.name,
-                    age: res.data.age,
-                    email: res.data.email
+                    name: newFriend.name,
+                    age: newFriend.age,
+                    email: newFriend.email
                 })
             })
             .catch(err => {
