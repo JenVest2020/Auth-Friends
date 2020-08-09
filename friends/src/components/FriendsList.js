@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 
 import FriendsCard from './FriendsCard';
+import AddFriend from './AddFriend';
 
 const FriendsList = () => {
     const [friends, setFriends] = useState([]);
@@ -22,7 +23,7 @@ const FriendsList = () => {
     return (
         <div>
             <h1 style={{ color: 'white' }}>Our Friends</h1>
-            <button className='btn'>Add Friend</button>
+            <AddFriend friends={friends} />
             {friends.map((friend, index) => {
                 console.log('from map', friend)
                 return (
@@ -31,6 +32,7 @@ const FriendsList = () => {
                         friends={friend} />
                 )
             })}
+                
         </div>
     )
 }

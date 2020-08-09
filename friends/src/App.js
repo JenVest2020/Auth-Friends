@@ -3,6 +3,7 @@ import { Route, Link, Switch } from 'react-router-dom';
 import './App.css';
 import LogIn from './components/LogIn';
 import FriendsList from './components/FriendsList';
+import AddFriend from './components/AddFriend';
 
 function App() {
   const BG2 = require('./images/FriendsPhotoStack.jpg');
@@ -22,6 +23,7 @@ function App() {
       <Switch>
         <Route path='/login' component={LogIn} />
         <Route path='/friendslist' component={FriendsList} />
+        <Route path='/addfriend' component={AddFriend} />
       </Switch>
     </div>
   );
