@@ -2,6 +2,7 @@ import React from 'react';
 
 
 const FriendsCard = props => {
+    console.log('from Fcard', props)
 
     return (
         <div>

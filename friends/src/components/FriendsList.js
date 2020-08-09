@@ -11,7 +11,6 @@ const FriendsList = () => {
             .then(res => {
                 console.log('get success:res', res);
                 setFriends([{
-                    ...friends,
                     id: res.data.id,
                     name: res.data.name,
                     age: res.data.age,
@@ -27,10 +26,11 @@ const FriendsList = () => {
         <div>
             <h1 style={{ color: 'white' }}>Our Friends</h1>
             <button className='btn'>Add Friend</button>
-            {friends.map(friend => {
+            {friends.map((friend, index) => {
+                console.log('from map', friend)
                 return (
                     <FriendsCard
-                        key={friend.id}
+                        key={index}
                         friends={friend} />
                 )
             })}
