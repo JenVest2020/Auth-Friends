@@ -4,6 +4,7 @@ import './App.css';
 import LogIn from './components/LogIn';
 import FriendsList from './components/FriendsList';
 import AddFriend from './components/AddFriend';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   const BG2 = require('./images/FriendsPhotoStack.jpg');
@@ -22,8 +23,8 @@ function App() {
       </div>
       <Switch>
         <Route path='/login' component={LogIn} />
-        <Route path='/friendslist' component={FriendsList} />
-        <Route path='/addfriend' component={AddFriend} />
+        <PrivateRoute path='/friendslist' component={FriendsList} />
+        <PrivateRoute path='/addfriend' component={AddFriend} />
       </Switch>
     </div>
   );

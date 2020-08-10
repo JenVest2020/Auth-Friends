@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {axiosWithAuth} from '../utils/axiosWithAuth';
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 import FriendsCard from './FriendsCard';
 
 
@@ -25,7 +25,7 @@ const AddFriend = (props) => {
             .then(res => {
                 console.log('from addFriend: res', res);
                 setNewFriend({
-                    id: Date.now(),
+                    id: getNextId(),
                     name: newFriend.name,
                     age: newFriend.age,
                     email: newFriend.email,
